@@ -1,0 +1,37 @@
+paths:
+  /auth/local/signup:
+    post:
+      tags: 
+        - AUTH
+      summary: signup an user and returns a token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  default: "test@test.com"
+                password:
+                  type: string
+                  default: "@Abcd1234"
+  /auth/local/login:
+    post:
+      tags: 
+        - AUTH
+      summary: login an user and returns a token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  default: "test@test.com"
+                password:
+                  type: string
+                  default: "@Abcd1234"

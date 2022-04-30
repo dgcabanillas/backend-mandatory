@@ -1,0 +1,51 @@
+paths:
+  /api/favs:
+    get:
+      tags: 
+        - FAVS
+      summary: get all favs list
+      security:
+        bearerAuth:
+          type: http
+          scheme: bearer
+          bearerFormat: JWT 
+    post:
+      tags: 
+        - FAVS
+      summary: create fav list
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                favs:
+                  type: array
+      security:
+        bearerAuth:
+          type: http
+          scheme: bearer
+          bearerFormat: JWT 
+  /api/favs/{id}:
+    get:
+      tags: 
+        - FAVS
+      summary: get a fav list from corresponding to an id
+      security:
+        bearerAuth:
+          type: http
+          scheme: bearer
+          bearerFormat: JWT 
+    delete: 
+      tags: 
+        - FAVS
+      summary: delete a fav list corresponding to an id
+      security:
+        bearerAuth:
+          type: http
+          scheme: bearer
+          bearerFormat: JWT 
+
