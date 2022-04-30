@@ -1,0 +1,25 @@
+paths:
+  /api/users:
+    get:
+      tags: 
+        - USERS
+      summary: get all users
+  /api/users/{id}:
+    get:
+      tags: 
+        - USERS
+      summary: return the user corresponding to an id
+      parameters:
+        - in: headers
+          name: id
+          type: string
+          description: id of an user
+    delete:
+      tags: 
+        - USERS
+      summary: remove the user corresponding to an id
+      parameters:
+        - in: headers
+          name: id
+          type: string
+          description: id of an user
